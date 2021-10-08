@@ -1,11 +1,9 @@
-![Alt Text](FleetChatBotUI/assets/hexagon-bot.png "Hexagon Virtual Assistant")
-# Hexagon virtual assistant
-Useful ChatBot (Virtual assistant) to allow mine dispatchers to use voice to make queries through the application of AI for voice recognition and chat
+This system consists of:
+* A UI component built with WPF
+* A small server side component built with ASP.NET
+* A REST API to consume data
+* A machine learning REST API with Python running NLP
 
-# Learn More
-[Hexagon virtual assistant project](https://confluence.hexagonmining.com/display/MIN/Hexagon+virtual+assistant)
+It was developed in one week.
 
-# Contributors
-@dosa
-@fehe
-@sanr
+Please see the video links at the description to know more.

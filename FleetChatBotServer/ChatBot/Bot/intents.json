@@ -1,0 +1,55 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [ "Hi", "Hey", "Is anyone there?", "Hello", "Hay" ],
+      "responses": [ "Hello", "Hi", "Hi there" ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [ "Bye", "See you later", "Goodbye" ],
+      "responses": [ "See you later", "Have a nice day", "Bye! Come back again" ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [ "Thanks", "Thank you", "That's helpful", "Thanks for the help" ],
+      "responses": [ "Happy to help!", "Any time!", "My pleasure", "You're most welcome!" ]
+    },
+    {
+      "tag": "about",
+      "patterns": [ "Who are you?", "What are you?", "Who you are?" ],
+      "responses": [ "I'm Hexagon, your bot assistant", "I'm Hexagon, an Artificial Intelligent bot" ]
+    },
+    {
+      "tag": "name",
+      "patterns": [ "what is your name", "what should I call you", "How should I call you", "whats your name?" ],
+      "responses": [ "You can call me Hexagon.", "I'm Hexagon!", "Just call me as Hexagon" ]
+    },
+    {
+      "tag": "help",
+      "patterns": [ "Could you help me?", "give me a hand please", "gimme a hand please", "Can you help me?", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please" ],
+      "responses": [ "Tell me how can I assist you", "Tell me your problem so I can assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you?" ]
+    },
+    {
+      "tag": "equipment_current_state",
+      "patterns": [ "Give me the state of the equipment Truck 01?", "What is the state of the equipment Truck 01?", "What is Truck 01 state?", "State of Truck 01" ],
+      "responses": [
+        "The current state of {0} is {1}",
+        "State of {0} is {1}"
+      ],
+      "url": "equipment-mng/equipment/{0}/realtime"
+    },
+    {
+      "tag": "equipment_current_operator",
+      "patterns": [ "Who is the operator of equipment Truck 01?", "Who is operating equipment Truck 01", "Who is on Truck 01", "Who is driving equipmnet Truck 01?" ],
+      "responses": [ "The current operator of {0} is {1}", "Operator of {0} is {1}", "{0} operator is {1}" ],
+      "url": "operator-mng/operators?equipment-id={0}"
+    },
+    {
+      "tag": "equipment_current_state_time",
+      "patterns": [ "How long is equipment Truck 01 in the current state?", "Duration of equipment Truck 01 current state", "Time of equipment Truck 01 current state", "Truck 01 state elapsed time" ],
+      "responses": [ "The time elapsed in state {0} is {1}" ],
+      "url": "equipment-mng/equipment/{0}/realtime"
+    }
+  ]
+}

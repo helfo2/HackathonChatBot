@@ -1,0 +1,160 @@
+﻿<Window x:Class="FleetChatBotUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FleetChatBotUI"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="HxGN ChatBot" Height="700" Width="600"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="CanMinimize"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="MessageSentTemplate">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Orientation="Vertical">
+                    <Border Background="{StaticResource PrimaryHueLightBrush}" CornerRadius="15 15 0 15" Margin="10 12">
+                        <TextBlock Margin="15" TextWrapping="Wrap" Text="{Binding Text}" Foreground="White"/>
+                    </Border>
+                    <TextBlock 
+                        Text="{Binding Time}"
+                        Foreground="Gray"
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Bottom" 
+                        FontSize="10" 
+                        Margin="10 0"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MessageReceivedTemplate">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                    <Border Background="DarkGray" CornerRadius="15 15 15 0" Margin="10 12">
+                        <TextBlock Margin="15" TextWrapping="Wrap" Text="{Binding Text}" Foreground="White"/>
+                    </Border>
+                    <TextBlock 
+                        Text="{Binding Time}" 
+                        Foreground="Gray"
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Bottom" 
+                        FontSize="10" 
+                        Margin="10 0"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MessageTemplate">
+            <ContentControl Content="{Binding}">
+                <ContentControl.Style>
+                    <Style TargetType="{x:Type ContentControl}">
+                        <Setter Property="ContentTemplate" Value="{StaticResource MessageSentTemplate}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding FromUser}" Value="false">
+                                <Setter Property="ContentTemplate" Value="{StaticResource MessageReceivedTemplate}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ContentControl.Style>
+            </ContentControl>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Background="#323232">
+        <Grid Margin="10" Background="#323232">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" />
+            <StackPanel 
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Orientation="Horizontal">
+                <TextBlock 
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    Foreground="Gray"
+                    Text="Audio device" />
+                <ComboBox 
+                    Margin="10,0,0,0"
+                    Foreground="Gray"
+                    Background="#1f1c1b"
+                    ItemsSource="{Binding AvailableRecordDevices}" 
+                    SelectedItem="{Binding SelectedDevice}" />
+            </StackPanel>
+        </Grid>
+        
+        <ScrollViewer
+            x:Name="chatScrollViewer"
+            Grid.Row="1"
+            VerticalScrollBarVisibility="Auto"
+            ScrollChanged="ScrollViewer_ScrollChanged"
+            >
+            <ItemsControl 
+                HorizontalContentAlignment="Stretch" 
+                ItemsSource="{Binding Messages}"
+                ItemTemplate="{StaticResource MessageTemplate}" />
+        </ScrollViewer>
+
+        <DockPanel 
+            Grid.Row="2"
+            Margin="0,20,0,0"
+            LastChildFill="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox 
+                    Grid.Column="0"
+                    Background="#222222"
+                    Foreground="Gray"
+                    Height="50"
+                    Text="{Binding UserMessage, UpdateSourceTrigger=PropertyChanged}"
+                    Name="chatTextBox"
+                    DockPanel.Dock="Left" 
+                    HorizontalAlignment="Stretch"
+                    TextAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center" />
+
+                <Grid Grid.Column="1" Width="20" Height="50" />
+
+                <Button 
+                    Grid.Column="2"
+                    Width="50"
+                    Height="50"
+                    DockPanel.Dock="Right"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    PreviewMouseDown ="Button_MouseDown"
+                    PreviewMouseUp="Button_MouseUp"
+                    Style="{DynamicResource MaterialDesignFloatingActionButton}">
+                    <Image Source="/assets/mic.png" Width="25"/>
+                </Button>
+            </Grid>
+        </DockPanel>
+    </Grid>
+    </Grid>
+
+</Window>

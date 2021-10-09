@@ -1,0 +1,184 @@
+﻿{
+    "Equipment": [
+      {
+        "Key": 30,
+        "Name": "Core Drill Rig 06"
+      },
+      {
+        "Key": 37,
+        "Name": "Loader 08"
+      },
+      {
+        "Key": 38,
+        "Name": "Sampling 03"
+      },
+      {
+        "Key": 39,
+        "Name": "Sampling 04"
+      },
+      {
+        "Key": 40,
+        "Name": "Truck 09"
+      },
+      {
+        "Key": 41,
+        "Name": "Truck 10"
+      },
+      {
+        "Key": 26,
+        "Name": "Fandrill 03"
+      },
+      {
+        "Key": 28,
+        "Name": "Sampling 01"
+      },
+      {
+        "Key": 29,
+        "Name": "Sampling 02"
+      },
+      {
+        "Key": 42,
+        "Name": "Truck 11"
+      },
+      {
+        "Key": 19,
+        "Name": "Core Drill Rig 01"
+      },
+      {
+        "Key": 15,
+        "Name": "Loader 03"
+      },
+      {
+        "Key": 24,
+        "Name": "Fandrill 01"
+      },
+      {
+        "Key": 25,
+        "Name": "Fandrill 02"
+      },
+      {
+        "Key": 27,
+        "Name": "Fandrill 04"
+      },
+      {
+        "Key": 31,
+        "Name": "Core Drill Rig 07"
+      },
+      {
+        "Key": 32,
+        "Name": "Fandrill 05"
+      },
+      {
+        "Key": 33,
+        "Name": "Fandrill 06"
+      },
+      {
+        "Key": 34,
+        "Name": "Jumbo 05"
+      },
+      {
+        "Key": 35,
+        "Name": "Jumbo 06"
+      },
+      {
+        "Key": 36,
+        "Name": "Loader 07"
+      },
+      {
+        "Key": 43,
+        "Name": "Scaler01"
+      },
+      {
+        "Key": 44,
+        "Name": "Emulsion01"
+      },
+      {
+        "Key": 45,
+        "Name": "Emulsion02"
+      },
+      {
+        "Key": 20,
+        "Name": "Core Drill Rig 02"
+      },
+      {
+        "Key": 21,
+        "Name": "Core Drill Rig 03"
+      },
+      {
+        "Key": 22,
+        "Name": "Core Drill Rig 04"
+      },
+      {
+        "Key": 23,
+        "Name": "Core Drill Rig 05"
+      },
+      {
+        "Key": 9,
+        "Name": "Jumbo 01"
+      },
+      {
+        "Key": 10,
+        "Name": "Jumbo 02"
+      },
+      {
+        "Key": 11,
+        "Name": "Jumbo 03"
+      },
+      {
+        "Key": 12,
+        "Name": "Jumbo 04"
+      },
+      {
+        "Key": 13,
+        "Name": "Loader 01"
+      },
+      {
+        "Key": 14,
+        "Name": "Loader 02"
+      },
+      {
+        "Key": 16,
+        "Name": "Loader 04"
+      },
+      {
+        "Key": 17,
+        "Name": "Loader 05"
+      },
+      {
+        "Key": 18,
+        "Name": "Loader 06"
+      },
+      {
+        "Key": 1,
+        "Name": "Truck 01"
+      },
+      {
+        "Key": 2,
+        "Name": "Truck 02"
+      },
+      {
+        "Key": 3,
+        "Name": "Truck 03"
+      },
+      {
+        "Key": 4,
+        "Name": "Truck 04"
+      },
+      {
+        "Key": 5,
+        "Name": "Truck 05"
+      },
+      {
+        "Key": 6,
+        "Name": "Truck 06"
+      },
+      {
+        "Key": 7,
+        "Name": "Truck 07"
+      },
+      {
+        "Key": 8,
+        "Name": "Truck 08"
+      }
+    ]
+}

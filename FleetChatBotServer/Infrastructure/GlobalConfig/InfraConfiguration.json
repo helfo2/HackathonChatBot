@@ -1,0 +1,25 @@
+{
+  "InfraConfiguration": {
+    "UGPro": {
+      "webApi": {
+        "httpClient": "UGPro",
+        "userName": "alex",
+        "password": "alex",
+        "serviceKey": "mine",
+        "serviceUri": "http://localhost:1513/",
+        "serviceVersion": "v1"
+      }
+    },
+    "ChatBot": {
+      "deepSpeechModelRelativePath": "assets\\deepspeech-0.9.3-models.pbmm",
+      "webApi": {
+        "httpClient": "ChatBot",
+        "userName": "",
+        "password": "",
+        "serviceKey": "chatbot",
+        "serviceUri": "http://localhost:12345/",
+        "serviceVersion": "v1"
+      }
+    }
+  }
+}

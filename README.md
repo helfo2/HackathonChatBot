@@ -9,6 +9,6 @@ It was developed in one week.
 
 The architecture is very simple and intuitive, given that the challenge is to actually have a completely customizable, domain-specific chat bot. Is is organized as follows:
 
-![Architecture](https://drive.google.com/file/d/1RB7em2lb0JpkKTpBbm56EHngfIjH_h3d/view?usp=sharing)
+![Architecture](https://drive.google.com/uc?export=view&id=1RB7em2lb0JpkKTpBbm56EHngfIjH_h3d)
 
 Please see the video links at the description to know more.
